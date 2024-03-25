@@ -4,23 +4,17 @@
 # Matthew Ingram
 # RPOS 344
 # UAlbany
-# Last revised: 2024-03-11
+# Last revised: 2024-03-25
 #
 #############################################
 
 ########################
-# SET DIRECTORY
+# DIRECTORY STRUCTURE
 ########################
 
 # check curret working directory
 getwd()
 
-# set
-path <- 'C:/Users/mi122167/Dropbox/SUNYAlbany/PredictingSCOTUS/Data/SCDB'
-setwd(path)
-
-# check again
-getwd()
 
 ########################
 # SET ENVIRONMENT
