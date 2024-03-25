@@ -66,19 +66,6 @@ data <- SCDB_2023_01_justiceCentered_Docket # need this originally with first lo
 # remove original object that was loaded
 rm(SCDB_2023_01_justiceCentered_Docket)
 
-# load data from web; not working
-#temp <- tempfile()
-#download.file("http://scdb.wustl.edu/_brickFiles/2021_01/SCDB_2021_01_justiceCentered_Docket.Rdata.zip",temp)
-#data <- load(unz(temp, "SCDB_2021_01_justiceCentered_Docket.RData"))
-#unlink(temp)
-
-# save partial file with only data since 2000
-#temp <- subset(data, term>1999)
-#write.csv(temp, file="./data/working/SCDB_2021_01_justiceCentered_Docket_2000s.csv")
-
-# read csv file
-#data <- read.csv(file="./data/working/SCDB_2021_01_justiceCentered_Docket_2000s.csv")
-
 #################################################
 # Inspect/explore data
 
@@ -109,7 +96,7 @@ data %>%
 table(data$direction, data$directiondum)
 
 
-# later, after prediction, translate to affirm/reverse based on lower court direction
+# translate to affirm/reverse based on lower court direction
 # see coding notes at WUSTL site: http://wusct.wustl.edu/media/trees.pdf
 
 table(data$lcDispositionDirection)
@@ -1667,6 +1654,8 @@ preds
 ######################################################################
 
 # save data
-save.image("./data/working/working20230325.RData")
+save.image("./data/working/working20240325.RData")
+
+# can export images and this data file to own computer
 
 #end
